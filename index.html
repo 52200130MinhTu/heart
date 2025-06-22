@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <audio autoplay>
+  <audio id="bg-music">
     <source src="./audio/audio-club.mp3" type="audio/mp3" />
   </audio>
 
@@ -36,7 +36,13 @@
   <script src="./js/main.js"></script>
   <script src="./js/particle.js"></script>
   <script src="./js/universe.js"></script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.addEventListener('click', function () {
+        document.getElementById('bg-music').play();
+      }, { once: true });
+    });
+  </script>
 </body>
 
 </html>
